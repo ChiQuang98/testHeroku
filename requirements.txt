@@ -6,8 +6,7 @@ gast                ==       0.2.2
 google-auth          ==      1.14.1                     
 google-auth-oauthlib ==      0.4.1                      
 google-pasta         ==      0.2.0                             
-
-hdf5                  ==     1.10.4                                
+                             
                     
 itsdangerous          ==     1.1.0                    
 jinja2                ==     2.11.2                     
