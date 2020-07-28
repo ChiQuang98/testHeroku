@@ -11,7 +11,7 @@ google-pasta         ==      0.2.0
 itsdangerous          ==     1.1.0                    
 jinja2                ==     2.11.2                     
 joblib               ==      0.14.1                     
-jpeg                  ==     9c                
+               
 keras                 ==     2.3.1                        
 keras-applications    ==     1.0.8                     
 keras-base            ==     2.3.1                   
