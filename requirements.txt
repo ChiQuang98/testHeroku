@@ -1,20 +1,14 @@
                  
 dlib               ==        19.19            
 flask              ==        1.1.1                      
-flask-uploads       ==       0.2.1                   
-freetype            ==       2.9.1               
+flask-uploads       ==       0.2.1                                
 gast                ==       0.2.2                   
 google-auth          ==      1.14.1                     
 google-auth-oauthlib ==      0.4.1                      
-google-pasta         ==      0.2.0                      
-grpcio               ==      1.27.2          
+google-pasta         ==      0.2.0                             
 h5py                 ==      2.10.0           
-hdf5                  ==     1.10.4              
-icc_rt               ==      2019.0.0            
-icu                  ==      64.2                     
-idna                 ==      2.9                       
-imutils              ==      0.5.3                   
-intel-openmp          ==     2020.0                      
+hdf5                  ==     1.10.4                                
+                    
 itsdangerous          ==     1.1.0                    
 jinja2                ==     2.11.2                     
 joblib               ==      0.14.1                     
@@ -25,11 +19,7 @@ keras-base            ==     2.3.1
 keras-preprocessing   ==     1.1.0                      
 keras-vggface         ==     0.6                     
 kiwisolver            ==     1.2.0          
-libblas               ==     3.8.0                   
-libcblas             ==      3.8.0                   
-libclang             ==      9.0.1          
-liblapack            ==      3.8.0                   
-liblapacke            ==     3.8.0                  
+                
 libopencv            ==      4.2.0                    
 libpng              ==       1.6.37               
 libprotobuf         ==       3.11.4              
