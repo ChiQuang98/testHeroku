@@ -1,5 +1,5 @@
 import pickle
-from model import *
+from model1 import *
 import numpy as np
 import cv2
 from sklearn.model_selection import train_test_split
@@ -60,7 +60,7 @@ def face_detector_by_image(imagePath,model_fd,classifier_model,pretrain_model):
                 img_encode = getFeatureImage(np.reshape(face, (224, 224, 3)), pretrain_model)
                 number = predict(img_encode, classifier_model)
 
-                listPerson.append(number)
+                listPerson.append(str(number))
 
                 cv2.rectangle(image, (startX, startY), (endX, endY), (0, 255, 0), 2)
                 cv2.putText(image, str(number), (startX, startY - 10),
