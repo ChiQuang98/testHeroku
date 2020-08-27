@@ -78,9 +78,9 @@ scikit-learn==0.21.3
 scipy==1.4.1
 
 
-tensorboard-cpu==2.3.0
-tensorflow-cpu==2.3.0
-tensorflow-cpu-estimator==2.3.0
+tensorboard==2.0.0
+tensorflow==2.0.0
+tensorflow-estimator==2.0.0
 
 
 
