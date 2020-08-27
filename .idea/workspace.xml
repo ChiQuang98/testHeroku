@@ -3,17 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8c4ff217-b381-4b29-bf48-e513d8762ba7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataClient/15542072_1804982426431079_7086777575006355255_n.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataClient/1586068121329.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataClient/1586068995998.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataClient/1586069073709.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Service.py" beforeDir="false" afterPath="$PROJECT_DIR$/Service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/maianhCrop.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/maianhCrop.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/model1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/savedImage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/savedImage.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
