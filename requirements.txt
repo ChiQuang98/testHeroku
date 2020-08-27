@@ -150,7 +150,7 @@ pyflakes==2.1.1
 Pygments==2.4.2
 PyJWT==1.7.1
 pylint==2.4.2
-pyodbc==4.0.27
+
 pyOpenSSL==19.0.0
 pyparsing==2.4.2
 pyreadline==2.1
