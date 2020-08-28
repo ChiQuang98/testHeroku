@@ -1,89 +1,66 @@
-
-
-
+absl-py==0.10.0
+astor==0.8.1
+astunparse==1.6.3
 blinker==1.4
-
-cachetools==3.1.1
-certifi==2020.06.20
-cffi==1.12.3
-
-cloudpickle==1.2.2
-
-cmake==3.16.3
-
-
-
-Flask==1.0.4
-fsspec==0.5.2
-future==0.17.1
-gast==0.2.2
-gevent==1.4.0
-glob2==0.7
-google-auth==1.11.2
+brotlipy==0.7.0
+cachetools @ file:///tmp/build/80754af9/cachetools_1596822027882/work
+certifi==2020.6.20
+cffi @ file:///C:/ci/cffi_1598352799320/work
+chardet==3.0.4
+click==7.1.2
+cryptography @ file:///C:/ci/cryptography_1598353383151/work
+Flask==1.1.2
+gast==0.3.3
+google-auth @ file:///tmp/build/80754af9/google-auth_1596863485713/work
 google-auth-oauthlib==0.4.1
-google-pasta==0.1.8
-
-h5py==2.9.0
-HeapDict==1.0.1
-html5lib==1.0.1
-idna==2.8
-imageio==2.6.0
-imagesize==1.1.0
-importlib-metadata==0.23
-ipykernel==5.1.2
-ipython==7.8.0
-ipython-genutils==0.2.0
-
-
-
-Jinja2==2.10.3
-joblib==0.13.2
-json5==0.8.5
-jsonschema==3.0.2
-
-Keras-Applications==1.0.8
-Keras-Preprocessing==1.1.0
-
-lazy-object-proxy==1.4.2
-
-
-
-nbconvert==5.6.0
-nbformat==4.4.0
-networkx==2.3
-
-
-
-numpy==1.16.5
-numpydoc==0.9.1
-
-opencv-python==4.2.0.32
-
-
-pandas==0.25.1
-
-Pillow==6.2.0
-
-
-
-
-
-
-
-requests==2.22.0
+google-pasta==0.2.0
+grpcio @ file:///C:/ci/grpcio_1597406403308/work
+h5py==2.10.0
+idna @ file:///tmp/build/80754af9/idna_1593446292537/work
+importlib-metadata @ file:///C:/ci/importlib-metadata_1593446525189/work
+itsdangerous==1.1.0
+Jinja2==2.11.2
+joblib==0.16.0
+Keras==2.4.3
+Keras-Applications @ file:///tmp/build/80754af9/keras-applications_1594366238411/work
+Keras-Preprocessing==1.1.2
+keras-vggface @ git+https://github.com/rcmalli/keras-vggface.git@719ad75625fe51436b9a9479114b3d136847e11a
+Markdown @ file:///C:/ci/markdown_1597415185889/work
+MarkupSafe @ file:///C:/ci/markupsafe_1594405949945/work
+mkl-fft==1.1.0
+mkl-random==1.1.1
+mkl-service==2.3.0
+numpy @ file:///C:/ci/numpy_and_numpy_base_1596233945180/work
+oauthlib==3.1.0
+opencv-python==4.4.0.42
+opt-einsum==3.3.0
+Pillow==7.2.0
+protobuf==3.13.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+PyJWT==1.7.1
+pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1594392929924/work
+pyreadline==2.1
+PySocks @ file:///C:/ci/pysocks_1594394709107/work
+PyYAML==5.3.1
+requests @ file:///tmp/build/80754af9/requests_1592841827918/work
 requests-oauthlib==1.3.0
-
-scikit-image==0.15.0
-scikit-learn==0.21.3
-scipy==1.4.1
-
-
-tensorboard==2.0.0
-tensorflow==2.0.0
-tensorflow-estimator==2.0.0
-
-
-
-Werkzeug==0.16.0
-widgetsnbextension==3.5.1
-
+rsa @ file:///tmp/build/80754af9/rsa_1596998415516/work
+scikit-learn==0.23.2
+scipy @ file:///C:/ci/scipy_1597686737426/work
+six==1.15.0
+tensorboard==2.2.2
+tensorboard-plugin-wit==1.6.0
+tensorflow==2.1.0
+tensorflow-cpu==2.2.0
+tensorflow-cpu-estimator==1.15.1
+tensorflow-estimator==2.2.0
+termcolor==1.1.0
+threadpoolctl==2.1.0
+urllib3 @ file:///tmp/build/80754af9/urllib3_1597086586889/work
+Werkzeug==0.16.1
+win-inet-pton==1.1.0
+wincertstore==0.2
+wrapt==1.12.1
+zipp==3.1.0
