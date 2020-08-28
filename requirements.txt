@@ -83,7 +83,7 @@ scipy==1.4.1
 
 
 tensorboard==2.2.2
-tensorboard-plugin-wit==1.6.0
+
 tensorflow==2.1.0
 tensorflow-cpu==2.2.0
 tensorflow-cpu-estimator==1.15.1
