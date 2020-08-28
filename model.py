@@ -1,11 +1,14 @@
 import tensorflow as tf
-from keras.applications import imagenet_utils
-from keras.preprocessing.image import img_to_array
-from keras.preprocessing.image import load_img
+from tensorflow.keras.applications import imagenet_utils
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.preprocessing.image import load_img
 import numpy as np
 import tensorflow.keras.backend as K
 from tensorflow import keras
-
+from keras.layers.core import Dense
+from keras.layers.core import Dropout
+from keras.layers.core import Flatten
+from keras.models import Model
 import cv2
 from keras.applications import VGG16
 from sklearn.preprocessing import LabelEncoder
@@ -17,8 +20,29 @@ def load_Pretrain_model():
     # model.summary()
     return model
 def load_model():
-    # tf.keras.models.load_model('data_model/face_recognition_restnet50_train_val_test.h5')
-    model =  tf.keras.models.load_model('data_model/face_recognition_restnet50_train_val_test.h5')
+    from tensorflow.keras.applications.resnet50 import preprocess_input
+    # train_data, val_data = loadData("train",image_path,labels, val_split=0.2)
+    # restnet = ResNet50(include_top=False, weights='imagenet', input_shape=(224,224,3))
+
+    baseModel = VGGFace(include_top=False, input_shape=(224, 224, 3), pooling='avg', model='resnet50')
+
+    # Xây thêm các layer
+    # Lấy output của ConvNet trong VGG16
+    fcHead = baseModel.output
+
+    # Flatten trước khi dùng FCs
+    fcHead = Flatten(name='flatten')(fcHead)
+
+    # Thêm FC
+    fcHead = Dense(256, activation='relu')(fcHead)
+    fcHead = Dropout(0.5)(fcHead)
+
+    # Output layer với softmax activation
+    fcHead = Dense(429, activation='softmax')(fcHead)
+
+    # Xây dựng model bằng việc nối ConvNet của VGG16 và fcHead
+    model = model = Model(inputs=baseModel.input, outputs=fcHead)
+    model.load_weights('data_model/face_recognition_restnet50.h5')
     return model
 def load_model_face_detector():
     model = cv2.dnn.readNetFromCaffe("data_model/deploy.prototxt.txt",
@@ -28,8 +52,8 @@ def getFeatureImage(faceImage,model):
     crop_img = img_to_array(faceImage)
     crop_img = np.expand_dims(crop_img, axis=0)
     crop_img = imagenet_utils.preprocess_input(crop_img)
-    features = model.predict(crop_img)
-    return features
+    # features = model.predict(crop_img)
+    return crop_img
 def load_Labels():
     label_person = []
     # open file and read the content in a list
@@ -54,7 +78,7 @@ def resize(image,size = (224,224)):
     else:
         image_norm = cv2.resize(image, size, 3)
     return image_norm
-def face_detector_by_image(imagePath,model_fd,classifier_model,pretrain_model,labelEnc):
+def face_detector_by_image(imagePath,model_fd,classifier_model,pretrain_model,labels):
     listPerson = []
     image = cv2.imread(imagePath)
     # print(image)
@@ -73,21 +97,22 @@ def face_detector_by_image(imagePath,model_fd,classifier_model,pretrain_model,la
         (startX, startY, endX, endY) = box.astype("int")
         # extract the confidence and prediction
         confidence = detections[0, 0, i, 2]
-        if (confidence > 0.165):
+        if (confidence > 0.2):
             # compute the (x, y)-coordinates of the bounding box for the
             # object
             face = cut_faces(image, box.astype("int"))  # tu toa do ta se cat duoc cac khuon mat
 
             if len(face):
                 face = resize(face)
-                cv2.imwrite("maianhCrop.jpg", face)
+                # cv2.imwrite("maianhCrop.jpg", face)
                 global name, accuracy
                 img_encode = getFeatureImage(np.reshape(face, (224, 224, 3)), pretrain_model)
                 number = predict(img_encode, classifier_model)
                 le = LabelEncoder()
+                labelsEnc = le.fit_transform(labels)
                 msv = le.inverse_transform(number)
-                listPerson.append(str(number))
-
+                print(msv)
+                listPerson.append(msv)
                 cv2.rectangle(image, (startX, startY), (endX, endY), (0, 255, 0), 2)
                 cv2.putText(image, str(msv), (startX, startY - 10),
                             cv2.FONT_HERSHEY_PLAIN, 3,
@@ -98,8 +123,8 @@ def face_detector_by_image(imagePath,model_fd,classifier_model,pretrain_model,la
     cv2.imwrite("savedImage.jpg",image)
     return listPerson
 def predict(img_encode,classifier_model):
-  embed = K.eval(img_encode)
-  person = classifier_model.predict(embed)#day la so 136
+  # embed = K.eval(img_encode)
+  person = classifier_model.predict(img_encode)
   y = np.argmax(person, axis=1)
   # le = LabelEncoder
   # le.inverse_transform(y)
