@@ -42,7 +42,7 @@ Jinja2==2.11.2
 json5==0.8.5
 jsonschema==3.0.2
 
-joblib==0.16.0
+joblib==1.2.0
 Keras==2.4.3
 Keras-Applications 
 Keras-Preprocessing==1.1.2
