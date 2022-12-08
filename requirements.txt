@@ -4,7 +4,7 @@
 blinker==1.4
 
 cachetools==3.1.1
-certifi==2020.06.20
+certifi==2022.12.7
 cffi==1.12.3
 
 cloudpickle==1.2.2
